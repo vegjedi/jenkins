@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    stages {
+        stage("Stage 1"){
+            steps {
+                echo "Hello World This is Step 1"
+            }
+        }
+        stage("Step 2"){
+            steps {
+                sh "mkdir love_1"
+                echo "Hello World This is Step 2"
+            }
+        }
+    }
+}
