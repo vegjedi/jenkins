@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    stages {
+        stage('Demo') {
+            steps {
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                myFunc("Hello there from Demo strage", 100)
+            }
+        }
+    }
+}
+
+def myFunc(String myText, int myNumber){
+    echo "myText is set to: ${myText}"
+    echo "myNumber is set to: ${myNumber}"
+}
